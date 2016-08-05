@@ -48,7 +48,6 @@ public class Logger {
 	 * otherwise returns false. The timestamp is in seconds granularity.
 	 */
 	public boolean shouldPrintMessage(int timestamp, String message) {
-		boolean res = true;
 		if (map.containsKey(message) && (timestamp - map.get(message)) < 10) {
 			return false;
 		}
